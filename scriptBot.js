@@ -6,7 +6,8 @@ if (mobile) {
 }
 
 
-//testing git
+//test test pushing from gallium
+//test test pushing from mac now
 //initializations
 var userInput;
 var libraryDiv = document.getElementById("libraryDiv");
