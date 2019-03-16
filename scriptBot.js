@@ -6,7 +6,7 @@ if (mobile) {
 }
 
 
-
+//testing git
 //initializations
 var userInput;
 var libraryDiv = document.getElementById("libraryDiv");
@@ -313,8 +313,9 @@ function type3(){
 }
 
 function type4(){
-	var final = "Type4, poetry in theory";
-
+	
+	var godname = 
+	var final = "Are you there God? It's me, " + godname;
 	deluxePrint(final);
 }
 
