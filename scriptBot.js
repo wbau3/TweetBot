@@ -6,15 +6,13 @@ if (mobile) {
 }
 
 
-//test test pushing from gallium
-//test test pushing from mac now
-//test test and again from gallium
+
 //initializations
 var userInput;
 var libraryDiv = document.getElementById("libraryDiv");
 libraryDiv.style.display = "none";
 window.addEventListener("keypress", returnKeyListener);
-let cycles = 0;
+let cycle = 0;
 
 main();
 
@@ -24,6 +22,7 @@ fancyPrint("William's TweetBot^^Enter your name: ");
 takeInput().then(function () { 
 	//document.getElementById("paragraph").textContent += "entered .then";
 	createLibrary(userInput); 
+	fancyPrint("Welcome " + name);
 
 } );
 
@@ -248,12 +247,13 @@ function flipflip(toPrint, x , y) {
 
 
 //generate the string
-function generate(userInput, cycles){
+function generate(){
 	userInput = "";
+	cycle ++;
 	
 	
 	var type = Math.floor((Math.random() * 3) + 1);
-	document.getElementById("paragraph").textContent += "^ type = " + type;
+	//document.getElementById("paragraph").textContent += "^ type = " + type;
 	
 	switch(type){
 	case 0:
@@ -279,7 +279,21 @@ function generate(userInput, cycles){
 
 function postGenerate(){
 		fancyPrint("^^Would you care for another? (Y/n)");
-		pendingInput = true;
+		takeInput().then(function () {
+			if(userInput == "Y"||"y"){
+					if(cycle == 3){
+						fancyPrint("My, what an appetite you have");
+						generate();
+					} else{
+						generate();
+					}
+
+			}else {
+				fancyPrint("bye");
+			}
+
+
+		});
 
 		
 
@@ -294,7 +308,7 @@ function type1(){
 
 	var final = "The " + pt1 + "of " + pt2;
 	deluxePrint(final);
-	
+	postGenerate();
 }
 
 function type2(){
@@ -304,6 +318,7 @@ function type2(){
 
 	var final = pt1 + ", " + pt2 + " " + pt3;
 	deluxePrint(final);
+	postGenerate();
 }
 
 function type3(){
@@ -312,6 +327,7 @@ function type3(){
 
 	var final = pt1 + pt2;
 	deluxePrint(final);
+	postGenerate();
 }
 
 function type4(){
@@ -319,6 +335,7 @@ function type4(){
 	var godname = 
 	var final = "Are you there God? It's me, " + godname;
 	deluxePrint(final);
+	postGenerate();
 }
 
 
