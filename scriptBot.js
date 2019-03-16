@@ -6,6 +6,7 @@ if (mobile) {
 }
 
 
+//test test pushing from gallium
 
 //initializations
 var userInput;
