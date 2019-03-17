@@ -332,8 +332,8 @@ function type3(){
 
 function type4(){
 	
-	var godname = 
-	var final = "Are you there God? It's me, " + godname;
+	//var godname = 
+	//var final = "Are you there God? It's me, " + godname;
 	deluxePrint(final);
 	postGenerate();
 }
