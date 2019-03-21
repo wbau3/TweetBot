@@ -22,7 +22,7 @@ fancyPrint("William's TweetBot^^Enter your name: ");
 takeInput().then(function () { 
 	//document.getElementById("paragraph").textContent += "entered .then";
 	createLibrary(userInput); 
-	fancyPrint("Welcome " + name);
+	fancyPrint("Welcome " + userInput);
 
 } );
 
