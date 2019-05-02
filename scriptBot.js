@@ -111,6 +111,7 @@ readFiles("/textFiles/" + path).then(function(data) {
 function readFiles(path, callback){
 	return new Promise(function(resolve, reject, counter) {
 		var  people = new XMLHttpRequest();
+		people.open("GET", path);
 		people.onreadystatechange = function(){
     
 			if (people.readyState == 4) {
